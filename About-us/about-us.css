@@ -1,0 +1,145 @@
+@font-face {
+  font-family: Insaniburger;
+  src: url(../fonts/Insanibc.ttf);
+}
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+:root {
+  --white-color: #fff;
+  --black-color: #000;
+  --orange-color: rgba(255, 132, 0, 1);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "DM Sans", sans-serif;
+  background: rgba(13, 13, 13, 1);
+  color: var(--white-color);
+  line-height: 25px;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+.logo img {
+  width: 180px;
+  height: 62px;
+  max-width: 100%;
+  object-fit: cover;
+}
+nav a {
+  padding: 20px;
+  color: var(--white-color);
+}
+.order {
+  background: var(--orange-color);
+  border-radius: 10px;
+  color: var(--white-color);
+  padding: 15px 20px;
+}
+.order:hover {
+  background: rgba(246, 95, 95, 1);
+}
+/* main section */
+main {
+  margin-top: 4rem;
+}
+.about {
+  padding: 30px;
+}
+.about h5 {
+  color: rgba(155, 0, 0, 1);
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 6px;
+  font-weight: 400;
+}
+.about span {
+  color: var(--orange-color);
+  font-family: "Insaniburger", sans-serif;
+  font-size: 52px;
+  line-height: 65px;
+  letter-spacing: 5px;
+}
+article {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+article img {
+  width: 379px;
+  height: 257px;
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+}
+.radius {
+  border-radius: 25px;
+  width: 300px;
+}
+footer {
+  padding: 2rem;
+}
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+}
+.footer-container {
+  padding: 20px;
+}
+.footer-logo img {
+  width: 180px;
+  height: 66.06px;
+}
+.footer-logo p {
+  max-width: 100%;
+  width: 260px;
+}
+.link-list li {
+  list-style-type: none;
+  padding-top: 1.7rem;
+}
+.link-list,
+.git {
+  padding-top: 3rem;
+}
+.git p,
+.input {
+  padding-top: 2rem;
+}
+.link-list li a {
+  color: var(--white-color);
+  font-size: 16px;
+}
+.quick,
+.git h3 {
+  color: rgba(246, 95, 95, 1);
+  font-weight: 600;
+  font-size: 24px;
+}
+.input input {
+  background: rgba(255, 255, 255, 1);
+  color: var(--black-color);
+  border: none;
+  outline: none;
+  width: 217px;
+  height: 53.27px;
+  border-radius: 15px;
+  opacity: 10%;
+  padding: 10px;
+  font-size: 18px;
+}
+.copyright {
+  text-align: center;
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+}
