@@ -1,59 +1,584 @@
+@font-face {
+  font-family: Insaniburger;
+  src: url(../fonts/Insanibc.ttf);
+}
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+:root {
+  --white-color: #fff;
+  --black-color: #000;
+  --orange-color: rgba(255, 132, 0, 1);
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   background: #1a1a1a;
   color: #f0f0f0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "DM Sans", sans-serif;
   max-width: 100%;
   margin: 0;
   min-height: 100%;
-  grid-area: "header header header";
 }
-header {
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 2rem;
+}
+.logo img {
+  width: 180px;
+  height: 62px;
   max-width: 100%;
-  height: 88px;
-  padding: 15px;
+  object-fit: cover;
+}
+nav a {
+  padding: 20px;
+  color: var(--white-color);
+}
+.order {
+  background: var(--orange-color);
+  border-radius: 10px;
+  color: var(--white-color);
+  padding: 15px 20px;
+}
+.order:hover {
+  background: rgba(246, 95, 95, 1);
+}
+.hamIcon {
+  position: static;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.hamIcon span {
+  width: 30px;
+  height: 3px;
+  background: var(--white-color);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+/* Main */
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 4rem;
+}
+.hero-content {
+  padding-top: 5rem;
+}
+.hero-content h1 {
+  font-family: "Insaniburger", sans-serif;
+  max-width: 510px;
+  font-size: 58px;
+  line-height: 60px;
+  padding-block: 1.5rem;
+}
+.hero-section .span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  padding: 10px;
+}
+.love {
+  width: 20px;
+  height: 20px;
+}
+small {
+  font-size: 24px;
+}
+.hero-content p {
+  max-width: 510px;
+  font-size: 24px;
+  padding-block: 3rem;
+}
+.red {
+  color: rgba(227, 24, 55, 1);
+}
+.yellow {
+  color: rgba(247, 185, 71, 0.79);
+}
+.a-link {
+  max-width: 100%;
+  display: flex;
+  gap: 10px;
+}
+.explore,
+.order-now {
+  border-radius: 7px;
+  max-width: 134px;
+  max-height: 51px;
+  white-space: nowrap;
+  padding: 15px 20px;
+  margin-left: 5px;
+  color: var(--white-color);
+}
+.explore {
+  border: 1px solid var(--white-color);
+}
+.order-now {
+  background: var(--orange-color);
+}
+.hero-image img {
+  max-width: 680.69px;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.special-offer {
+  text-align: center;
+}
+.special-offer h2 {
+  font-size: 48px;
+}
+.special-offer p {
+  font-size: 18px;
+  padding: 1rem;
+}
+.special-offer h2 span {
+  color: rgba(227, 24, 55, 1);
 }
 .card-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  max-width: 100%;
   padding-top: 40px;
+  padding-inline: 2rem;
 }
-.card-image,
 .card {
   position: relative;
+  max-width: 100%;
+}
+.half {
+  max-width: 270px;
+  position: absolute;
+  top: 3px;
+  left: 24px;
 }
 .card {
   max-width: 100%;
   border-radius: 10px;
   padding: 20px;
-}
-.card-image {
-  max-width: 100%;
-  width: 100px;
-  height: 100px;
   margin: 0 auto;
 }
 .card-image img {
-  width: 100%;
-  height: 100%;
+  width: 230px;
+  height: 230px;
+  background: var(--white-color);
   border-radius: 50%;
+  object-fit: cover;
+  position: relative;
+  top: 4px;
+  left: 24px;
+  z-index: 9990;
 }
-.divider {
-  height: 1px;
-  background: rgba(221, 221, 221, 0.1);
-  margin: 20px 0;
+.badge {
+  background: var(--orange-color);
+  border: 2px solid #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 35%;
+  right: 10%;
+  z-index: 9999;
+}
+.liters {
+  width: 260px;
   max-width: 100%;
+  min-height: 239px;
+  border-radius: 20px;
+  background: linear-gradient(
+    to bottom,
+    rgba(96, 96, 96, 0.1),
+    rgb(179, 116, 116)
+  );
+  position: relative;
+  bottom: 90px;
+  left: 10px;
+}
+.liters p {
+  color: rgba(246, 95, 95, 1);
+  font-weight: 600;
+  font-size: 24px;
+  text-align: center;
+  padding-top: 9rem;
+}
+.card button {
+  width: 121px;
+  height: 51px;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 15px 20px;
+  background: var(--orange-color);
+  color: var(--white-color);
+  position: absolute;
+  left: 28%;
+  top: 85%;
+}
+.benefit-container {
+  display: flex;
+  gap: 5rem;
+  align-items: center;
+  padding-block: 5rem;
+}
+.benefit-text {
+  margin-top: 3rem;
+}
+.benefit {
+  position: relative;
+}
+.need-text {
+  font-size: 18px;
+  padding-block: 2rem;
+}
+.benefit img {
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+}
+.benefit img:nth-of-type(2) {
+  position: absolute;
+  left: 58%;
+  top: 15px;
+  width: 100%;
+}
+.benefits {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 10px;
+}
+.benefits .circle__0 {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: rgba(247, 160, 0, 1);
+}
+.benefits p {
+  font-size: 18px;
+  font-weight: 400;
+}
+.benefit-text {
+  display: flex;
+  flex-direction: column;
+  padding-top: 4rem;
+}
+.benefit-text p {
+  max-width: 617px;
+}
+.benefit-text h2 {
+  font-size: 48px;
+  font-family: "Insaniburger", sans-serif;
+  max-width: 452px;
+}
+.testimonial-section {
+  width: 100%;
+  padding-inline: 2rem;
+}
+.testimonies-text {
+  text-align: center;
+}
+.testimonial__container {
+  justify-content: center;
+  align-items: center;
+  gap: 6rem;
+  width: 100%;
+}
+.flex_00 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+.flex_00:nth-of-type(2),
+.flex_00:nth-of-type(3) {
+  display: none;
+}
+.testimonial {
+  max-width: 500px;
+  text-align: center;
+  color: #fff;
+  border: 3px outset #fff;
+  border-radius: 42px;
+  max-width: 580px;
+  height: 305px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.testimonies-text h2 {
+  font-size: 24.34px;
+  font-weight: 600;
+  line-height: 26.2px;
+}
+.testimonies-text strong {
+  color: rgba(247, 160, 0, 1);
+  font-size: 48px;
+  font-family: "Insaniburger", sans-serif;
+}
+.testimonial p {
+  padding-inline: 17px;
+  padding-top: 2rem;
+  max-height: 140px;
+}
+.about-us-btn {
+  width: 100%;
+  max-width: 110px;
+  height: 51px;
+  background: rgba(255, 132, 0, 1);
+  border-radius: 10px;
+  padding: 15px 20px;
+}
+.about-us-btn a {
+  color: var(--white-color);
+}
+.image-logo {
+  width: 120px;
+  position: relative;
+  top: 70px;
+  left: 40%;
+}
+.image-logo img {
+  width: 80px;
+  max-width: 100%;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+.testimonial p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+.testimonial .name {
+  font-weight: bold;
+  color: #ffd700; /* yellow highlight */
+  font-size: 1.2rem;
+}
+.testimonial .location {
+  font-size: 0.95rem;
+  color: #ccc;
+}
+/* FOOTER */
+footer {
+  padding: 2rem;
 }
 .footer-container {
   display: flex;
   justify-content: space-between;
+  gap: 10px;
+  padding: 2rem;
+}
+.footer-container {
+  padding: 20px;
+}
+.footer-logo img {
+  width: 180px;
+  height: 66.06px;
+}
+.footer-logo p {
+  width: 100%;
+  max-width: 260px;
+}
+.link-list li {
+  list-style-type: none;
+  padding-top: 1.7rem;
+}
+.link-list,
+.git {
+  padding-top: 3rem;
+}
+.git p,
+.input {
+  padding-top: 2rem;
+}
+.link-list li a {
+  color: var(--white-color);
+  font-size: 16px;
+}
+.quick,
+.git h3 {
+  color: rgba(246, 95, 95, 1);
+  font-weight: 600;
+  font-size: 24px;
+  white-space: nowrap;
+}
+.input {
+  display: flex;
+  gap: 10px;
+  max-width: 100%;
+}
+.input input {
+  background: rgba(255, 255, 255, 1);
+  color: var(--black-color);
+  border: none;
+  outline: none;
+  max-width: 217px;
+  height: 53.27px;
+  border-radius: 15px;
+  opacity: 10%;
+  padding: 10px;
+  font-size: 18px;
+}
+.contact-us {
+  background: var(--orange-color);
+  border-radius: 10px;
+  padding: 15px 20px;
+  width: 125px;
+  max-width: 100%;
+  height: 51px;
+  text-align: center;
+  white-space: nowrap;
+}
+.contact-us a {
+  color: var(--white-color);
+}
+.copyright {
+  text-align: center;
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+}
+@media (max-width: 770px) {
+  .footer-container {
+    flex-direction: column;
+    padding-block: 4rem;
+  }
+  .link-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .about span {
+    font-size: 20px;
+  }
+  footer {
+    padding: 0px;
+  }
+  .input input {
+    width: 186px;
+  }
+  .git {
+    margin: 0 auto;
+  }
+}
+@media (max-width: 768px) {
+  nav,
+  article img {
+    display: none;
+  }
+  .hero-section {
+    flex-direction: column-reverse;
+  }
+}
+@media (max-width: 765px) {
+  .flex_00 {
+    flex-wrap: wrap;
+  }
+  .flex_00:nth-of-type(2),
+  .flex_00:nth-of-type(3) {
+    display: flex;
+  }
+  .benefit img {
+    display: none;
+  }
+  .menuLinks li a {
+    padding: 15px 20px;
+  }
+  .menuLinks {
+    position: absolute;
+    top: 15%;
+    right: 0;
+    background: var(--black-color);
+    height: 304px;
+    flex-direction: column;
+    display: none;
+    padding: 20px 0;
+    margin: 5px;
+    list-style-type: none;
+    border-radius: 0px 0px 10px 10px;
+  }
+  .menuLinks li {
+    padding: 20px;
+    text-align: center;
+  }
+  .menuLinks.show {
+    display: block;
+  }
+}
+@media (max-width: 480px) {
+  main {
+    margin-top: 1rem;
+    padding: 0;
+  }
+  header {
+    padding: 10px;
+  }
+  .flex_00 {
+    gap: 0rem;
+  }
+  .testimonial p {
+    font-size: 12px;
+  }
+  .span {
+    justify-content: center;
+  }
+  .hero-content {
+    text-align: center;
+    padding-top: 1rem;
+  }
+  .hero-content h1 {
+    font-size: 32px;
+    line-height: 40px;
+    padding-block: 0rem;
+  }
+  .hero-content p {
+    padding-block: 1rem;
+    width: 100%;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .a-link {
+    padding-block: 2rem;
+  }
+}
+@media (max-width: 352px) {
+  .input {
+    display: block;
+  }
+  div.contact-us {
+    margin-top: 8px;
+  }
+}
+@media (min-width: 769px) {
+  .hamIcon {
+    display: none;
+  }
+  .order {
+    display: flex;
+  }
+  .menuLinks {
+    display: flex;
+    align-items: center;
+  }
+  .menuLinks li {
+    list-style-type: none;
+  }
 }

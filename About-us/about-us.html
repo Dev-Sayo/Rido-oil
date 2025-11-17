@@ -16,15 +16,24 @@
   </head>
   <body>
     <header>
-      <div class="logo">
-        <img src="../images/rido-image.png" alt="" />
-      </div>
-      <nav>
-        <a href="../index.html">HOME</a>
-        <a href="../product/product.html">Product</a>
-        <a href="../About-us/about-us.html">About Us</a>
-        <a href="../contact-us/contact-us.html">Contact us</a>
-        <a class="order" href="../order-now/order-now.html">Order Now</a>
+      <nav class="navbar">
+        <div class="logo">
+          <img src="../images/rido-image.png" alt="" />
+        </div>
+        <div class="hamIcon" id="hamIcon-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="menuLinks" id="menuLinks">
+          <li><a href="../index.html">HOME</a></li>
+          <li><a href="../product/product.html">Product</a></li>
+          <li><a href="../About-us/about-us.html">About Us</a></li>
+          <li><a href="../contact-us/contact-us.html">Contact us</a></li>
+          <li>
+            <a class="order" href="../order-now/order-now.html">Order Now</a>
+          </li>
+        </ul>
       </nav>
     </header>
     <main>
@@ -174,11 +183,14 @@
           <p>Your trusted source for pure palm oil</p>
           <div class="input">
             <input type="text" />
-            <a class="order" href="./contact-us/contact-us.html">Contact Us</a>
+            <div class="contact-us">
+              <a href="./contact-us/contact-us.html">Contact Us</a>
+            </div>
           </div>
         </div>
       </div>
       <p class="copyright">Copyright &copy; 2022 Rido Palmoil</p>
     </footer>
+    <script src="../dropdown.js"></script>
   </body>
 </html>

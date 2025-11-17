@@ -6,3 +6,18 @@
 html {
   scroll-behavior: smooth;
 }
+@media (min-width: 769px) {
+  .hamIcon {
+    display: none;
+  }
+  .order {
+    display: flex;
+  }
+  .menuLinks {
+    display: flex;
+    align-items: center;
+  }
+  .menuLinks li {
+    list-style-type: none;
+  }
+}

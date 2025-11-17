@@ -3,9 +3,116 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="../Contact-us/contact-us.css" />
+    <link rel="icon" type="image/png" href="../images/rido-image.png" />
   </head>
   <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <img src="../images/rido-image.png" alt="" />
+        </div>
+        <div class="hamIcon" id="hamIcon-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="menuLinks" id="menuLinks">
+          <li><a href="../index.html">HOME</a></li>
+          <li><a href="../product/product.html">Product</a></li>
+          <li><a href="../About-us/about-us.html">About Us</a></li>
+          <li><a href="../contact-us/contact-us.html">Contact us</a></li>
+          <li>
+            <a class="order" href="../order-now/order-now.html">Order Now</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="contact-hero">
+        <div class="info">
+          <h1>Contact Us</h1>
+          <p>
+            At Rido Palm Oil, we're always here to help—whether you have
+            questions about our premium palm oil products, need assistance with
+            your order, or want to discuss partnership opportunities. Founded in
+            2020 in the heart of Nigeria, we've built lasting relationships with
+            restaurants, shops, and households across the country by
+            prioritizing quality, reliable on-time delivery, and a seamless
+            online ordering experience. Your satisfaction is our top priority,
+            and we're just a call or message away.
+          </p>
+        </div>
+      </section>
+      <section class="contact-info">
+        <div class="side-one">
+          <span class="rido-pic">
+            <img src="../images/Rectangle 4598.png" alt=""
+          /></span>
+          <div class="email-tel-map-parent">
+            <div class="email-tel-map">
+              <div class="reach">
+                <img src="../images/icon.png" alt="" />
+                <span>ridoskido@gmail.com</span>
+              </div>
+              <p>
+                (For detailed inquiries, bulk orders, or feedback—expect a reply
+                within 24 hours.)
+              </p>
+            </div>
+            <div class="email-tel-map">
+              <div class="reach">
+                <img src="../images/phone-call.svg" alt="" />
+                <span> +2348109143027</span>
+              </div>
+              <p>
+                (Available Monday–Friday, 8 AM–6 PM WAT for quick queries and
+                order updates.)
+              </p>
+            </div>
+            <div class="email-tel-map reach">
+              <img src="../images/map-pin (1).svg" alt="" />
+              <span class="addy"
+                >Ewupe Road, Obanla-Ijaliye, Sango Ota. Ogun
+                State. Nigeria</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="form-container">
+          <form>
+            <h2 class="get-in-touch">GET IN TOUCH</h2>
+            <p>
+              We'd love to hear from you! Reach out via phone or email, and our
+              friendly team will respond promptly to ensure you get the support
+              you need.
+            </p>
+            <div class="input-parent">
+              <div class="input-group">
+                <input type="text" id="name" placeholder="Your Name" />
+              </div>
+              <div class="input-group">
+                <input type="email" id="email" placeholder="Your Email" />
+              </div>
+            </div>
+            <br />
+            <div class="textarea-group">
+              <textarea
+                name="message"
+                id="message"
+                cols="50"
+                rows="5"
+                placeholder="Type Your Message Here..."
+              ></textarea>
+            </div>
+            <div class="send-btn">
+              <button class="send" type="submit">Send Message</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
     <footer>
       <span class="icon">
         <i class="fa-brands fa-facebook-f fa-xs" style="color: #fdce77"></i>
@@ -32,11 +139,14 @@
           <p>Your trusted source for pure palm oil</p>
           <div class="input">
             <input type="text" />
-            <a class="order" href="./contact-us/contact-us.html">Contact Us</a>
+            <div class="contact-us">
+              <a href="./contact-us/contact-us.html">Contact Us</a>
+            </div>
           </div>
         </div>
       </div>
       <p class="copyright">Copyright &copy; 2022 Rido Palmoil</p>
     </footer>
+    <script src="../dropdown.js"></script>
   </body>
 </html>
