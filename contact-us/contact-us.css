@@ -260,6 +260,9 @@ footer {
 }
 /*  MEDIA QUERY  */
 @media (max-width: 768px) {
+  .navbar {
+    padding: 1rem;
+  }
   nav,
   article img,
   .order {

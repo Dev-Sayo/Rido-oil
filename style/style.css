@@ -490,6 +490,12 @@ footer {
   }
 }
 @media (max-width: 765px) {
+  .navbar {
+    padding: 1rem;
+  }
+  .hero-section {
+    padding-top: 1rem;
+  }
   .flex_00 {
     flex-wrap: wrap;
   }

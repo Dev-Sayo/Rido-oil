@@ -179,6 +179,9 @@ footer {
   padding-bottom: 1rem;
 }
 @media (max-width: 768px) {
+  .navbar {
+    padding: 1rem;
+  }
   nav,
   article img,
   .order {
