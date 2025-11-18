@@ -180,7 +180,8 @@ footer {
 }
 @media (max-width: 768px) {
   nav,
-  article img {
+  article img,
+  .order {
     display: none;
   }
   article {
@@ -214,18 +215,6 @@ footer {
   .menuLinks.show {
     display: block;
   }
-}
-@media (max-width: 480px) {
-  main {
-    margin-top: 1rem;
-    padding: 0;
-  }
-  header {
-    padding: 10px;
-  }
-  .about {
-    padding: 20px;
-  }
   .footer-container {
     flex-direction: column;
     padding-block: 4rem;
@@ -244,6 +233,21 @@ footer {
   }
   .input input {
     width: 186px;
+  }
+}
+@media (max-width: 480px) {
+  main {
+    margin-top: 1rem;
+    padding: 0;
+  }
+  header {
+    padding: 10px;
+  }
+  .navbar {
+    padding: 1rem;
+  }
+  .about {
+    padding: 20px;
   }
 }
 @media (max-width: 352px) {

@@ -261,7 +261,8 @@ footer {
 /*  MEDIA QUERY  */
 @media (max-width: 768px) {
   nav,
-  article img {
+  article img,
+  .order {
     display: none;
   }
   .menuLinks li a {
