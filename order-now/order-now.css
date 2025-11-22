@@ -1,15 +1,199 @@
+@font-face {
+  font-family: Insaniburger;
+  src: url(../fonts/Insanibc.ttf);
+}
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+:root {
+  --white-color: #fff;
+  --black-color: #000;
+  --orange-color: rgba(255, 132, 0, 1);
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
 }
 html {
   scroll-behavior: smooth;
 }
-@media (min-width: 769px) {
+body {
+  font-family: "DM Sans", sans-serif;
+  background: rgba(13, 13, 13, 1);
+  color: var(--white-color);
+  line-height: 25px;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+}
+.logo img {
+  width: 180px;
+  height: 62px;
+  max-width: 100%;
+  object-fit: cover;
+}
+nav a {
+  padding: 20px;
+  color: var(--white-color);
+}
+.order {
+  background: var(--orange-color);
+  border-radius: 10px;
+  color: var(--white-color);
+  padding: 15px 20px;
+}
+.order:hover {
+  background: rgba(246, 95, 95, 1);
+}
+.hamIcon {
+  position: static;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.hamIcon span {
+  width: 30px;
+  height: 3px;
+  background: var(--white-color);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+/* main */
+.order-item-section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.order-page-text {
+  display: flex;
+  height: 110px;
+  width: 100%;
+  flex-direction: column;
+  padding-left: 8rem;
+}
+.order-page-text h1 {
+  text-transform: uppercase;
+  color: rgba(251, 159, 109, 1);
+  font-family: "Insaniburger", sans-serif;
+  font-size: 2.5rem;
+  height: 2.5rem;
+}
+.order-page-text p {
+  font-size: 20px;
+  width: 100%;
+}
+.order-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 3rem;
+  max-width: 100%;
+  margin: 0 auto;
+}
+.order-image-container img {
+  max-width: 507px;
+  width: 100%;
+  object-fit: contain;
+  max-height: 555px;
+  padding: 1rem;
+}
+.fill-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 100%;
+  gap: 0.4rem;
+  padding: 1rem;
+}
+.input-field {
+  width: 335px;
+  height: 47px;
+  background: rgba(183, 183, 183, 0.2);
+  border-radius: 0.6rem;
+}
+.input-field input {
+  outline: none;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: transparent;
+  color: var(--white-color);
+  caret-color: var(--white-color);
+  height: 47px;
+  padding: 10px;
+  border: none;
+}
+input::placeholder {
+  color: rgba(255, 255, 255, 1);
+  font-weight: 500;
+  font-size: 14px;
+}
+.note-ad {
+  height: 118px;
+}
+/*  MEDIA QUERY  */
+@media (max-width: 768px) {
   .navbar {
     padding: 1rem;
   }
+  nav,
+  article img,
+  .order {
+    display: none;
+  }
+  .menuLinks li a {
+    padding: 15px 20px;
+  }
+  .menuLinks {
+    position: absolute;
+    top: 15%;
+    right: 0;
+    background: var(--black-color);
+    height: 304px;
+    flex-direction: column;
+    display: none;
+    padding: 20px 0;
+    margin: 5px;
+    list-style-type: none;
+    border-radius: 0px 0px 10px 10px;
+  }
+  .menuLinks li {
+    padding: 20px;
+    text-align: center;
+  }
+  .menuLinks.show {
+    display: block;
+  }
+  .order-container {
+    flex-direction: column-reverse;
+  }
+  .order-page-text {
+    justify-content: center;
+    align-items: center;
+    padding-left: 0rem;
+    text-align: center;
+  }
+  .order-page-text h1 {
+    font-size: 20px;
+    font-weight: 100;
+  }
+  .order-page-text p {
+    font-size: 12px;
+  }
+}
+@media (max-width: 350px) {
+  .input-field {
+    width: 100%;
+    max-width: 330px;
+  }
+}
+@media (min-width: 769px) {
   .hamIcon {
     display: none;
   }

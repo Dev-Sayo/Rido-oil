@@ -29,12 +29,6 @@ body {
   align-items: center;
   padding: 2rem;
 }
-.logo img {
-  width: 180px;
-  height: 62px;
-  max-width: 100%;
-  object-fit: cover;
-}
 nav a {
   padding: 20px;
   color: var(--white-color);
@@ -75,7 +69,7 @@ main {
 .info h1 {
   color: var(--orange-color);
   font-family: "Insaniburger", sans-serif;
-  font-family: 52px;
+  padding-bottom: 1.4rem;
   letter-spacing: 5px;
 }
 .info p {
@@ -86,15 +80,17 @@ main {
   max-width: 100%;
   display: flex;
   justify-content: space-around;
+  /* flex-wrap: wrap; */
   gap: 10px;
   align-items: center;
   padding-block: 5rem;
 }
 .side-one {
-  width: 100%;
+  max-width: 100%;
 }
 .rido-pic img {
   max-width: 337px;
+  width: 100%;
   height: 100%;
   object-fit: cover;
 }
@@ -102,9 +98,9 @@ main {
   width: 100%;
 }
 .email-tel-map img {
-  width: 20.89px;
+  max-width: 20.89px;
   height: 20.93px;
-  max-width: 100%;
+  width: 100%;
 }
 .email-tel-map p {
   padding: 10px;
@@ -114,12 +110,13 @@ main {
 }
 .addy,
 .email-tel-map p {
-  width: 404px;
+  max-width: 404px;
 }
 .reach {
   display: flex;
   align-items: center;
   gap: 8px;
+  max-width: 140px;
 }
 .form-container {
   max-width: 100%;
@@ -139,31 +136,29 @@ form p {
   display: flex;
   align-items: center;
   gap: 10px;
-  max-width: 100%;
+  width: 100%;
 }
 .input-group {
   width: 290px;
+  max-width: 100%;
 }
 .input-group input {
   width: 100%;
   padding: 15px 20px;
   height: 56px;
   border-radius: 10px;
-  border: none;
-  outline: none;
 }
-.textarea-group textarea {
-  max-width: 590px;
+textarea {
   width: 100%;
   height: 100px;
   border-radius: 10px;
-  border: none;
-  outline: none;
 }
-.textarea-group textarea,
+textarea,
 .input-group input {
   padding: 1rem;
   border: 2px solid #666;
+  border: none;
+  outline: none;
 }
 .send-btn {
   display: flex;
@@ -179,6 +174,7 @@ form p {
   background: var(--orange-color);
   color: var(--white-color);
   cursor: pointer;
+  margin-top: 10px;
 }
 .send:hover {
   background: rgba(246, 95, 95, 1);
@@ -194,9 +190,12 @@ footer {
 .footer-container {
   padding: 20px;
 }
-.footer-logo img {
+.footer-logo img,
+.logo img {
   width: 180px;
+  max-width: 100%;
   height: 66.06px;
+  object-fit: contain;
 }
 .footer-logo p {
   max-width: 100%;
@@ -306,6 +305,25 @@ footer {
     display: grid;
     place-content: center;
   }
+  .footer-container {
+    flex-direction: column;
+    padding-block: 4rem;
+  }
+  .link-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .about span {
+    font-size: 20px;
+  }
+  footer {
+    padding: 0px;
+  }
+  .input input {
+    width: 186px;
+  }
 }
 @media (max-width: 480px) {
   main {
@@ -349,25 +367,6 @@ footer {
   .form-container {
     text-align: center;
     padding: 1rem;
-  }
-  .footer-container {
-    flex-direction: column;
-    padding-block: 4rem;
-  }
-  .link-list {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .about span {
-    font-size: 20px;
-  }
-  footer {
-    padding: 0px;
-  }
-  .input input {
-    width: 186px;
   }
 }
 @media (max-width: 352px) {

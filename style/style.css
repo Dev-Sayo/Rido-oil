@@ -33,7 +33,7 @@ body {
 }
 .logo img {
   width: 180px;
-  height: 62px;
+  aspect-ratio: 10/3;
   max-width: 100%;
   object-fit: cover;
 }
@@ -74,6 +74,7 @@ nav a {
 }
 .hero-content {
   padding-top: 5rem;
+  aspect-ratio: 16/9;
 }
 .hero-content h1 {
   font-family: "Insaniburger", sans-serif;
@@ -109,7 +110,6 @@ small {
   color: rgba(247, 185, 71, 0.79);
 }
 .a-link {
-  max-width: 100%;
   display: flex;
   gap: 10px;
 }
@@ -117,6 +117,7 @@ small {
 .order-now {
   border-radius: 7px;
   max-width: 134px;
+  width: 100%;
   max-height: 51px;
   white-space: nowrap;
   padding: 15px 20px;
@@ -161,6 +162,7 @@ small {
 }
 .half {
   max-width: 270px;
+  width: 100%;
   position: absolute;
   top: 3px;
   left: 24px;
@@ -173,6 +175,7 @@ small {
 }
 .card-image img {
   width: 230px;
+  max-width: 100%;
   height: 230px;
   background: var(--white-color);
   border-radius: 50%;
@@ -181,6 +184,10 @@ small {
   top: 4px;
   left: 24px;
   z-index: 9990;
+}
+.keg {
+  width: 198px;
+  object-fit: contain !important;
 }
 .badge {
   background: var(--orange-color);
@@ -276,7 +283,7 @@ small {
 .benefit-text {
   display: flex;
   flex-direction: column;
-  padding-top: 4rem;
+  padding-top: 15rem;
 }
 .benefit-text p {
   max-width: 617px;
@@ -294,28 +301,21 @@ small {
   text-align: center;
 }
 .testimonial__container {
-  justify-content: center;
+  display: flex;
   align-items: center;
+  overflow-x: scroll;
   gap: 6rem;
   width: 100%;
 }
-.flex_00 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 5rem;
-}
-.flex_00:nth-of-type(2),
-.flex_00:nth-of-type(3) {
+.testimonial__container::-webkit-scrollbar {
   display: none;
 }
 .testimonial {
-  max-width: 500px;
+  width: 500px;
   text-align: center;
   color: #fff;
   border: 3px outset #fff;
   border-radius: 42px;
-  max-width: 580px;
   height: 305px;
   display: flex;
   flex-direction: column;
@@ -325,7 +325,7 @@ small {
 .testimonies-text h2 {
   font-size: 24.34px;
   font-weight: 600;
-  line-height: 26.2px;
+  line-height: 44px;
 }
 .testimonies-text strong {
   color: rgba(247, 160, 0, 1);
@@ -369,7 +369,7 @@ small {
 }
 .testimonial .name {
   font-weight: bold;
-  color: #ffd700; /* yellow highlight */
+  color: #ffd700;
   font-size: 1.2rem;
 }
 .testimonial .location {
@@ -426,16 +426,17 @@ footer {
   max-width: 100%;
 }
 .input input {
-  background: rgba(255, 255, 255, 1);
-  color: var(--black-color);
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff !important;
   border: none;
   outline: none;
   max-width: 217px;
   height: 53.27px;
   border-radius: 15px;
-  opacity: 10%;
+
   padding: 10px;
   font-size: 18px;
+  caret-color: var(--white-color);
 }
 .contact-us {
   background: var(--orange-color);
@@ -488,20 +489,18 @@ footer {
   .hero-section {
     flex-direction: column-reverse;
   }
-}
-@media (max-width: 765px) {
   .navbar {
     padding: 1rem;
   }
   .hero-section {
     padding-top: 1rem;
   }
-  .flex_00 {
+  .testimonial__container {
     flex-wrap: wrap;
+    gap: 0rem;
   }
-  .flex_00:nth-of-type(2),
-  .flex_00:nth-of-type(3) {
-    display: flex;
+  .testimonial {
+    width: 100%;
   }
   .benefit img {
     display: none;
@@ -511,7 +510,7 @@ footer {
   }
   .menuLinks {
     position: absolute;
-    top: 15%;
+    top: 12%;
     right: 0;
     background: var(--black-color);
     height: 304px;
@@ -537,6 +536,9 @@ footer {
   }
   header {
     padding: 10px;
+  }
+  .a-link {
+    justify-content: center;
   }
   .flex_00 {
     gap: 0rem;
